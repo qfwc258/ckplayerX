@@ -1,0 +1,17 @@
+<script type="text/javascript" src="/ckplayer/ckplayer/ckplayer.js" charset="utf-8"></script>
+<div id="video" style="width:600px;height:400px;"></div>
+<script type="text/javascript">
+	var videoObject = {
+		container: '#video',//“#”代表容器的ID，“.”或“”代表容器的class
+		variable: 'player',//该属性必需设置，值等于下面的new chplayer()的对象
+		flashplayer:false,//如果强制使用flashplayer则设置成true
+		video:'{dede:field.video/}'//视频地址
+	};	
+if (videoObject['video']!=''){
+		var player=new ckplayer(videoObject);
+	}
+	var ckplayerAutoDisplay=document.getElementById('video');
+	if (ckplayerAutoDisplay.innerHTML==null||ckplayerAutoDisplay.innerHTML.length==0){
+		ckplayerAutoDisplay.style.display='none';
+	}
+</script>
